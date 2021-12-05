@@ -7,9 +7,9 @@ res будет в обратном порядке, нужно делать rever
 
 export const flattenArrayStack = <T>(arr: Array<T>) => {
   let res = []
-  while(arr.length) {
-    let el  = arr.pop()
-    if(Array.isArray(el)) {
+  while (arr.length) {
+    let el = arr.pop()
+    if (Array.isArray(el)) {
       arr = arr.concat(el)
     } else {
       res.push(el)
@@ -19,5 +19,20 @@ export const flattenArrayStack = <T>(arr: Array<T>) => {
 }
 
 /* через рекурсию
-
+перебираем массив. Если элемент массив, то применяем к нему рекурсию 
+и конкатенируем результат с результирующим массивом
+минус этой рекурсии  - потребление памяти и ресурсов:
+чем больше вложенность, тем больше экземпляров функции и переменных будет создано
 */
+
+// export const flattenArrayRecursion = (arr: Array<any>) => {
+//   let res:Array<any> = []
+//   arr.forEach(el => {
+//     if (Array.isArray(el)) {
+//       res = res.concat(flattenArrayRecursion(el))
+//     } else {
+//       res.push(el)
+//     }
+//   })
+//   return res
+// }
