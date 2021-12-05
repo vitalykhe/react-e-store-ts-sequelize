@@ -1,5 +1,5 @@
-import { sortByKey } from "../../src/utils/sortByKey";
-import { arrayRemoveDuplicates } from "../../src/utils/arrayRemoveDuplicates";
+import { sortByKey } from "../../utils/sortByKey";
+import { arrayRemoveDuplicates } from "../../utils/arrayRemoveDuplicates";
 
 const names = [
   "Gary",
@@ -58,7 +58,7 @@ test("remove duplicates", () => {
 
 test("sort", () => {
   expect(sortByKey(users, "name")).toStrictEqual(usersSortedByName);
-});
+})
 
 test("sortByAge", () => {
   expect(sortByKey(users, "age")).toStrictEqual(users);
