@@ -1,13 +1,12 @@
 const { BasketDevice } = require("../models/models");
 const { Basket } = require("../models/models");
 const ApiError = require("../error/apiError");
-const { noExtendLeft } = require("sequelize/types/lib/operators");
 
 class BasketController {
   async putDevice(req, res) {
     try {
       const { deviceId, basketId, qty } = req.body;
-      const basketId = await Basket.create({ userId });
+      // const basketId = await Basket.create({ userId });
       const basketDevice = await BasketDevice.create({ basketId, deviceId, qty });
       res.json(basketDevice);
     } catch (error) {
