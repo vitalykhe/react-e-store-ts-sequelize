@@ -2,10 +2,10 @@ const Router = require('express')
 const BasketController = require('../controllers/basketController')
 const router = new Router()
 
-router.post('/put', BasketController.putDevice)
-router.post('/remove', BasketController.removeDevice)
-router.get('/update', () => {})
-router.post('/', BasketController.getBasket)
+router.put('/put', BasketController.putDevice)
+router.delete('/remove', BasketController.removeDevice)
+router.update('/update', () => {})
+router.get('/', BasketController.getBasket)
 
 
 module.exports = router
