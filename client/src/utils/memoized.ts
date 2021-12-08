@@ -9,8 +9,4 @@ export const factorial = (n: number): number => {
   return (n === 0 || n === 1) ? 1 : n * factorial(n - 1)
 }
 
-export const memoizedFactorial = memo((n: number): number => {
-  console.log('Calulating factorial. step ' + n)
-  return (n === 0 || n === 1) ? 1 : n * factorial(n - 1)
-})
-
+export const memoizedFactorial = memo(factorial)

@@ -4,7 +4,7 @@ const router = new Router()
 
 router.post('/put', BasketController.putDevice)
 router.post('/remove', BasketController.removeDevice)
-router.get('/update', BasketController.updateBasket)
+router.get('/update', () => {})
 router.post('/', BasketController.getBasket)
 
 

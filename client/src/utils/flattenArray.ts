@@ -7,12 +7,12 @@ res будет в обратном порядке, нужно делать rever
 
 export const flattenArrayStack = <T>(arr: Array<T>) => {
   let res = []
-  while (arr.length) {
-    let el = arr.pop()
-    if (Array.isArray(el)) {
-      arr = arr.concat(el)
+  while(arr.length) {
+    let temp = arr.pop()
+    if(Array.isArray(temp)) {
+      arr = arr.concat(temp)
     } else {
-      res.push(el)
+      res.push(temp)
     }
   }
   return res.reverse()

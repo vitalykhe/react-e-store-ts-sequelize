@@ -37,4 +37,3 @@ export class Stack<T> {
   pop = this.linkedList.pop
   push = this.linkedList.push
 }
-
